@@ -1,3 +1,3 @@
-# COMP397-W2016-StateMachine
+# COMP397-The Dragon
 
-COMP397 State Machine Template for Web Game Programming @ Centennial
+COMP397 Assignment 1 - using State Machine.
