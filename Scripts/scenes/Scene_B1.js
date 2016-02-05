@@ -3,20 +3,20 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-// PLAY SCENE
+// Scene_B1 SCENE
 var scenes;
 (function (scenes) {
-    var Play = (function (_super) {
-        __extends(Play, _super);
+    var Scene_B1 = (function (_super) {
+        __extends(Scene_B1, _super);
         // CONSTRUCTOR ++++++++++++++++++++++
-        function Play() {
+        function Scene_B1() {
             _super.call(this);
         }
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
-        Play.prototype.start = function () {
+        Scene_B1.prototype.start = function () {
             // add the PLAY label to the scene
-            this._playLabel = new createjs.Text("Opening Scene", "60px Consolas", "#000000");
+            this._playLabel = new createjs.Text("Scene_B1 Scene", "60px Consolas", "#000000");
             this._playLabel.regX = this._playLabel.getMeasuredWidth() * 0.5;
             this._playLabel.regY = this._playLabel.getMeasuredHeight() * 0.5;
             this._playLabel.x = config.Screen.CENTER_X;
@@ -36,23 +36,23 @@ var scenes;
             stage.addChild(this);
         };
         // PLAY Scene updates here
-        Play.prototype.update = function () {
+        Scene_B1.prototype.update = function () {
         };
         //EVENT HANDLERS ++++++++++++++++++++
         // NEXT Button click event handler
-        Play.prototype._nextButtonClick = function (event) {
+        Scene_B1.prototype._nextButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.Scene_A;
+            scene = config.Scene.Scene_B1a;
             changeScene();
         };
         // BACK Button click event handler
-        Play.prototype._backButtonClick = function (event) {
+        Scene_B1.prototype._backButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.Scene_B;
+            scene = config.Scene.Scene_B1b;
             changeScene();
         };
-        return Play;
+        return Scene_B1;
     })(objects.Scene);
-    scenes.Play = Play;
+    scenes.Scene_B1 = Scene_B1;
 })(scenes || (scenes = {}));
-//# sourceMappingURL=play.js.map
+//# sourceMappingURL=Scene_B1.js.map

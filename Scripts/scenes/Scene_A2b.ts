@@ -1,8 +1,8 @@
-// OVER SCENE
+// Scene_A2b SCENE
 module scenes {
-    export class Over extends objects.Scene {
+    export class Scene_A2b extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
-        private _overLabel: createjs.Text;
+        private _playLabel: createjs.Text;
         private _backButton: objects.Button;
         
         // CONSTRUCTOR ++++++++++++++++++++++
@@ -16,17 +16,17 @@ module scenes {
         public start(): void {
 
             // add the PLAY label to the scene
-            this._overLabel = new createjs.Text("Over Scene", "60px Consolas", "#000000");
-            this._overLabel.regX = this._overLabel.getMeasuredWidth() * 0.5;
-            this._overLabel.regY = this._overLabel.getMeasuredHeight() * 0.5;
-            this._overLabel.x = config.Screen.CENTER_X;
-            this._overLabel.y = config.Screen.CENTER_Y;
-            this.addChild(this._overLabel);
+            this._playLabel = new createjs.Text("Scene_A2b Scene", "60px Consolas", "#000000");
+            this._playLabel.regX = this._playLabel.getMeasuredWidth() * 0.5;
+            this._playLabel.regY = this._playLabel.getMeasuredHeight() * 0.5;
+            this._playLabel.x = config.Screen.CENTER_X;
+            this._playLabel.y = config.Screen.CENTER_Y-60;
+            this.addChild(this._playLabel);
 
-            // add the BACK button to the OVER scene
+            // add the BACK button to the PLAY scene
             this._backButton = new objects.Button(
                 "BackButton",
-                config.Screen.CENTER_X,
+                config.Screen.CENTER_X - 100,
                 config.Screen.CENTER_Y + 60);
             this.addChild(this._backButton);
            
@@ -49,7 +49,7 @@ module scenes {
         // BACK Button click event handler
         private _backButtonClick(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
-            scene = config.Scene.PLAY;
+            scene = config.Scene.MENU;
             changeScene();
         }
     }

@@ -8,7 +8,16 @@ var scene;
 // Game Scenes
 var menu;
 var play;
-var over;
+var scene_a;
+var scene_a1;
+var scene_a2;
+var scene_a2a;
+var scene_a2b;
+var scene_b;
+var scene_b1;
+var scene_b1a;
+var scene_b1b;
+var scene_b2;
 function init() {
     // create a reference the HTML canvas Element
     canvas = document.getElementById("canvas");
@@ -64,12 +73,82 @@ function changeScene() {
             currentScene = play;
             console.log("Starting PLAY Scene");
             break;
-        case config.Scene.OVER:
-            // show the game OVER scene
+        case config.Scene.Scene_A:
+            // show the PLAY scene
             stage.removeAllChildren();
-            over = new scenes.Over();
-            currentScene = over;
-            console.log("Starting OVER Scene");
+            scene_a = new scenes.Scene_A();
+            currentScene = scene_a;
+            console.log("Starting A Scene");
+            break;
+        case config.Scene.Scene_A1:
+            // show the PLAY scene
+            stage.removeAllChildren();
+            scene_a1 = new scenes.Scene_A1();
+            currentScene = scene_a1;
+            console.log("Starting A1 Scene");
+            break;
+        case config.Scene.Scene_A2:
+            // show the PLAY scene
+            stage.removeAllChildren();
+            scene_a2 = new scenes.Scene_A2();
+            currentScene = scene_a2;
+            console.log("Starting A2 Scene");
+            break;
+        case config.Scene.Scene_A2a:
+            // show the PLAY scene
+            stage.removeAllChildren();
+            scene_a2a = new scenes.Scene_A2a();
+            currentScene = scene_a2a;
+            console.log("Starting A2a Scene");
+            break;
+        case config.Scene.Scene_A2b:
+            // show the PLAY scene
+            stage.removeAllChildren();
+            scene_a2b = new scenes.Scene_A2b();
+            currentScene = scene_a2b;
+            console.log("Starting A2b Scene");
+            break;
+        case config.Scene.Scene_A2a:
+            // show the PLAY scene
+            stage.removeAllChildren();
+            scene_a2a = new scenes.Scene_A2a();
+            currentScene = scene_a2a;
+            console.log("Starting A2a Scene");
+            break;
+        case config.Scene.Scene_B:
+            // show the PLAY scene
+            stage.removeAllChildren();
+            scene_b = new scenes.Scene_B();
+            currentScene = scene_b;
+            console.log("Starting B Scene");
+            break;
+        case config.Scene.Scene_B1:
+            // show the PLAY scene
+            stage.removeAllChildren();
+            scene_b1 = new scenes.Scene_B1();
+            currentScene = scene_b1;
+            console.log("Starting B1 Scene");
+            break;
+        case config.Scene.Scene_B1a:
+            // show the PLAY scene
+            stage.removeAllChildren();
+            scene_b1a = new scenes.Scene_B1a();
+            currentScene = scene_b1a;
+            console.log("Starting B1a Scene");
+            break;
+        case config.Scene.Scene_B1b:
+            // show the PLAY scene
+            stage.removeAllChildren();
+            scene_b1b = new scenes.Scene_B1b();
+            currentScene = scene_b1b;
+            console.log("Starting B1b Scene");
+            break;
+        case config.Scene.Scene_B2:
+            // show the PLAY scene
+            stage.removeAllChildren();
+            scene_b2 = new scenes.Scene_B2();
+            currentScene = scene_b2;
+            console.log("Starting B2 Scene");
             break;
     }
     console.log(currentScene.numChildren);

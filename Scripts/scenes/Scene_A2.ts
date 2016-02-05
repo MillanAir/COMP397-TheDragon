@@ -1,6 +1,6 @@
-// PLAY SCENE
+// Scene_A2 SCENE
 module scenes {
-    export class Play extends objects.Scene {
+    export class Scene_A2 extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _playLabel: createjs.Text;
         private _nextButton: objects.Button;
@@ -17,7 +17,7 @@ module scenes {
         public start(): void {
 
             // add the PLAY label to the scene
-            this._playLabel = new createjs.Text("Opening Scene", "60px Consolas", "#000000");
+            this._playLabel = new createjs.Text("Scene_A2 Scene", "60px Consolas", "#000000");
             this._playLabel.regX = this._playLabel.getMeasuredWidth() * 0.5;
             this._playLabel.regY = this._playLabel.getMeasuredHeight() * 0.5;
             this._playLabel.x = config.Screen.CENTER_X;
@@ -60,14 +60,14 @@ module scenes {
         // NEXT Button click event handler
         private _nextButtonClick(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
-            scene = config.Scene.Scene_A;
+            scene = config.Scene.Scene_A2a;
             changeScene();
         }
         
         // BACK Button click event handler
         private _backButtonClick(event: createjs.MouseEvent) {
             // Switch to the OVER Scene
-            scene = config.Scene.Scene_B;
+            scene = config.Scene.Scene_A2b;
             changeScene();
         }
     }
