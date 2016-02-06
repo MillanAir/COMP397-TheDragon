@@ -15,23 +15,32 @@ var scenes;
         // PUBLIC METHODS +++++++++++++++++++++
         // Start Method
         Scene_B.prototype.start = function () {
-            // add the PLAY label to the scene
-            this._playLabel = new createjs.Text("Scene_B Scene", "60px Consolas", "#000000");
-            this._playLabel.regX = this._playLabel.getMeasuredWidth() * 0.5;
-            this._playLabel.regY = this._playLabel.getMeasuredHeight() * 0.5;
-            this._playLabel.x = config.Screen.CENTER_X;
-            this._playLabel.y = config.Screen.CENTER_Y - 60;
+            // add the MENU label to the scene
+            this._playLabel = new createjs.Text("After searching for hours, you could not be able to locate\n\n" +
+                "your axe. You become deeply distressed that you start crying\n\n" +
+                "bitterly. At this moment, an angel appeared there and asked you\n\n" +
+                "that why you were crying. You sobbed out the whole sad story. The \n\n" +
+                "angel felt sorry for you and dived into the river to find your axe.\n\n" +
+                " soon angel returned with a Golden Axe in her hand.\n\n " +
+                "What do you want to do?", "28px Consolas", "#fff");
+            this._playLabel.x = config.Screen.CENTER_X - 400;
+            this._playLabel.y = config.Screen.CENTER_Y;
             this.addChild(this._playLabel);
-            // add the NEXT button to the PLAY scene
-            this._nextButton = new objects.Button("NextButton", config.Screen.CENTER_X + 100, config.Screen.CENTER_Y + 60);
-            this.addChild(this._nextButton);
-            // NEXT Button event listener
-            this._nextButton.on("click", this._nextButtonClick, this);
-            // add the BACK button to the PLAY scene
-            this._backButton = new objects.Button("BackButton", config.Screen.CENTER_X - 100, config.Screen.CENTER_Y + 60);
-            this.addChild(this._backButton);
+            //add the Image to the scene
+            this._gameImage = new createjs.Bitmap("../../Assets/images/4.png");
+            this._gameImage.x = config.Screen.CENTER_X - 300;
+            this._gameImage.y = config.Screen.CENTER_Y - 350;
+            this.addChild(this._gameImage);
+            // add the Search button to the PLAY scene
+            this._searchButton = new objects.Button("DenyButton", config.Screen.CENTER_X + 200, config.Screen.CENTER_Y + 300);
+            this.addChild(this._searchButton);
+            // Search Button event listener
+            this._searchButton.on("click", this._searchButtonClick, this);
+            // add the Home button to the PLAY scene
+            this._HomeButton = new objects.Button("AcceptButton", config.Screen.CENTER_X - 200, config.Screen.CENTER_Y + 300);
+            this.addChild(this._HomeButton);
             // BACK Button event listener
-            this._backButton.on("click", this._backButtonClick, this);
+            this._HomeButton.on("click", this._HomeButtonClick, this);
             // add this scene to the global stage container
             stage.addChild(this);
         };
@@ -40,15 +49,15 @@ var scenes;
         };
         //EVENT HANDLERS ++++++++++++++++++++
         // NEXT Button click event handler
-        Scene_B.prototype._nextButtonClick = function (event) {
+        Scene_B.prototype._HomeButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.Scene_B1;
+            scene = config.Scene.Scene_B2;
             changeScene();
         };
         // BACK Button click event handler
-        Scene_B.prototype._backButtonClick = function (event) {
+        Scene_B.prototype._searchButtonClick = function (event) {
             // Switch to the OVER Scene
-            scene = config.Scene.Scene_B2;
+            scene = config.Scene.Scene_B1;
             changeScene();
         };
         return Scene_B;

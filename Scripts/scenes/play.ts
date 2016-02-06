@@ -42,7 +42,7 @@ module scenes {
             this.addChild(this._searchButton);
            
             // Search Button event listener
-            this._searchButton.on("click", this._HomeButtonClick, this);
+            this._searchButton.on("click", this._searchButtonClick, this);
 
             // add the Home button to the PLAY scene
             this._HomeButton = new objects.Button(

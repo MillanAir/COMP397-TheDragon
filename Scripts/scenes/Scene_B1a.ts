@@ -15,21 +15,23 @@ module scenes {
         // Start Method
         public start(): void {
 
-            // add the PLAY label to the scene
-            this._playLabel = new createjs.Text("Scene_B1a Scene", "60px Consolas", "#000000");
-            this._playLabel.regX = this._playLabel.getMeasuredWidth() * 0.5;
-            this._playLabel.regY = this._playLabel.getMeasuredHeight() * 0.5;
-            this._playLabel.x = config.Screen.CENTER_X;
-            this._playLabel.y = config.Screen.CENTER_Y-60;
+            // add the MENU label to the scene
+            this._playLabel = new createjs.Text("You accepted the silver axe from the angel and \n\n"+
+                                                "went back your way home thinking that you will easily\n\n"+
+                                                "sell the axe. Sadly, on your way home the axe turned\n\n"+
+                                                "into wood. You sold the wood and got peanuts in return\n\n"+
+                                                "You bought a new Axe by the Loan money and you lived rest of your\n\n"+
+                                                "life repaying that loan and died in displeasure. Game Over!", "28px Consolas", "#fff");
+            this._playLabel.x = config.Screen.CENTER_X-400;
+            this._playLabel.y = config.Screen.CENTER_Y;
             this.addChild(this._playLabel);
 
-            
 
             // add the BACK button to the PLAY scene
             this._backButton = new objects.Button(
-                "BackButton",
-                config.Screen.CENTER_X - 100,
-                config.Screen.CENTER_Y + 60);
+                "StartOverButton",
+                config.Screen.CENTER_X,
+                config.Screen.CENTER_Y+200);
             this.addChild(this._backButton);
            
             // BACK Button event listener
@@ -47,6 +49,7 @@ module scenes {
         
         
         //EVENT HANDLERS ++++++++++++++++++++
+        
         
         
         // BACK Button click event handler

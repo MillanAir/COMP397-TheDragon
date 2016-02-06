@@ -34,7 +34,7 @@ var scenes;
             this._searchButton = new objects.Button("searchButton", config.Screen.CENTER_X + 200, config.Screen.CENTER_Y + 300);
             this.addChild(this._searchButton);
             // Search Button event listener
-            this._searchButton.on("click", this._HomeButtonClick, this);
+            this._searchButton.on("click", this._searchButtonClick, this);
             // add the Home button to the PLAY scene
             this._HomeButton = new objects.Button("GoHomeButton", config.Screen.CENTER_X - 200, config.Screen.CENTER_Y + 300);
             this.addChild(this._HomeButton);

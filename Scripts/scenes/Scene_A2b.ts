@@ -3,6 +3,7 @@ module scenes {
     export class Scene_A2b extends objects.Scene {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _playLabel: createjs.Text;
+        
         private _backButton: objects.Button;
         
         // CONSTRUCTOR ++++++++++++++++++++++
@@ -22,6 +23,8 @@ module scenes {
             this._playLabel.x = config.Screen.CENTER_X;
             this._playLabel.y = config.Screen.CENTER_Y-60;
             this.addChild(this._playLabel);
+            
+         
 
             // add the BACK button to the PLAY scene
             this._backButton = new objects.Button(

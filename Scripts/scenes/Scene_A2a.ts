@@ -4,6 +4,7 @@ module scenes {
         //PRIVATE INSTANCE VARIABLES ++++++++++++
         private _playLabel: createjs.Text;
         private _backButton: objects.Button;
+        private _gameImage:createjs.Bitmap;
         
         // CONSTRUCTOR ++++++++++++++++++++++
         constructor() {
@@ -15,19 +16,25 @@ module scenes {
         // Start Method
         public start(): void {
 
-            // add the PLAY label to the scene
-            this._playLabel = new createjs.Text("Scene_A2a Scene", "60px Consolas", "#000000");
-            this._playLabel.regX = this._playLabel.getMeasuredWidth() * 0.5;
-            this._playLabel.regY = this._playLabel.getMeasuredHeight() * 0.5;
-            this._playLabel.x = config.Screen.CENTER_X;
-            this._playLabel.y = config.Screen.CENTER_Y-60;
+            // add the MENU label to the scene
+            this._playLabel = new createjs.Text("You went back home and sold the Golden and Silver Axes\n\n"+
+                                                "and became Rich and lived rest of your life as a king.", "28px Consolas", "#fff");
+            this._playLabel.x = config.Screen.CENTER_X-400;
+            this._playLabel.y = config.Screen.CENTER_Y;
             this.addChild(this._playLabel);
+
+             //add the Image to the scene
+            this._gameImage = new createjs.Bitmap("../../Assets/images/king.gif");
+            this._gameImage.x = config.Screen.CENTER_X-600;
+            this._gameImage.y = config.Screen.CENTER_Y-350;
+            this.addChild(this._gameImage);
+            
             
             // add the BACK button to the PLAY scene
             this._backButton = new objects.Button(
-                "BackButton",
-                config.Screen.CENTER_X - 100,
-                config.Screen.CENTER_Y + 60);
+                "StartOverButton",
+                config.Screen.CENTER_X,
+                config.Screen.CENTER_Y+200);
             this.addChild(this._backButton);
            
             // BACK Button event listener
@@ -45,6 +52,8 @@ module scenes {
         
         
         //EVENT HANDLERS ++++++++++++++++++++
+        
+        
         
         // BACK Button click event handler
         private _backButtonClick(event: createjs.MouseEvent) {

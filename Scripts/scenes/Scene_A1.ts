@@ -15,19 +15,22 @@ module scenes {
         // Start Method
         public start(): void {
 
-            // add the PLAY label to the scene
-            this._playLabel = new createjs.Text("Scene_A1", "60px Consolas", "#000000");
-            this._playLabel.regX = this._playLabel.getMeasuredWidth() * 0.5;
-            this._playLabel.regY = this._playLabel.getMeasuredHeight() * 0.5;
-            this._playLabel.x = config.Screen.CENTER_X;
-            this._playLabel.y = config.Screen.CENTER_Y-60;
+            // add the MENU label to the scene
+            this._playLabel = new createjs.Text("You seriously think the angel is fool enough to bring \n\n"+
+                                                "you the Diamond Axe. The Happy Angel soon turned into \n\n"+
+                                                "angry demon and threw your axe back into water.And you \n\n"+
+                                                "know what happened next.... you lived rest of your\n\n"+
+                                                "life as a Hermit and died in disbelief. Game Over!", "28px Consolas", "#fff");
+            this._playLabel.x = config.Screen.CENTER_X-400;
+            this._playLabel.y = config.Screen.CENTER_Y;
             this.addChild(this._playLabel);
 
-           // add the BACK button to the PLAY scene
+
+            // add the BACK button to the PLAY scene
             this._backButton = new objects.Button(
-                "BackButton",
-                config.Screen.CENTER_X - 100,
-                config.Screen.CENTER_Y + 60);
+                "StartOverButton",
+                config.Screen.CENTER_X,
+                config.Screen.CENTER_Y+200);
             this.addChild(this._backButton);
            
             // BACK Button event listener
