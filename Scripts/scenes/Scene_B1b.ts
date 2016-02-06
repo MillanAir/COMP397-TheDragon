@@ -20,7 +20,7 @@ module scenes {
             // add the MENU label to the scene
             this._playLabel = new createjs.Text("Now this time Angel return with your original iron Axe\n\n"+
                                                 "Now either you can accept the Axe or argue with the foolish\n\n"+
-                                                "angel that your axe was made of Diamond.\n\n "+
+                                                "angel that your axe was made of Diamond.\n\n"+
                                                 "What do you want to do?", "28px Consolas", "#fff");
             this._playLabel.x = config.Screen.CENTER_X-400;
             this._playLabel.y = config.Screen.CENTER_Y;

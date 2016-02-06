@@ -25,7 +25,7 @@ var scenes;
             this._playLabel.y = config.Screen.CENTER_Y;
             this.addChild(this._playLabel);
             // add the BACK button to the PLAY scene
-            this._backButton = new objects.Button("StartOverButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 200);
+            this._backButton = new objects.Button("StartOverButton", config.Screen.CENTER_X, config.Screen.CENTER_Y + 300);
             this.addChild(this._backButton);
             // BACK Button event listener
             this._backButton.on("click", this._backButtonClick, this);

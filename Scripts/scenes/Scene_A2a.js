@@ -23,7 +23,7 @@ var scenes;
             this.addChild(this._playLabel);
             //add the Image to the scene
             this._gameImage = new createjs.Bitmap("../../Assets/images/king.gif");
-            this._gameImage.x = config.Screen.CENTER_X - 600;
+            this._gameImage.x = config.Screen.CENTER_X - 100;
             this._gameImage.y = config.Screen.CENTER_Y - 350;
             this.addChild(this._gameImage);
             // add the BACK button to the PLAY scene

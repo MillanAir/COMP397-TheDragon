@@ -30,7 +30,7 @@ module scenes {
             this._backButton = new objects.Button(
                 "StartOverButton",
                 config.Screen.CENTER_X,
-                config.Screen.CENTER_Y+200);
+                config.Screen.CENTER_Y+300);
             this.addChild(this._backButton);
            
             // BACK Button event listener

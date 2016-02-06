@@ -27,14 +27,14 @@ module scenes {
             
             //add the Image to the scene
             this._gameImage = new createjs.Bitmap("../../Assets/images/8.png");
-            this._gameImage.x = config.Screen.CENTER_X-600;
+            this._gameImage.x = config.Screen.CENTER_X-700;
             this._gameImage.y = config.Screen.CENTER_Y-350;
             this.addChild(this._gameImage);
             
             // add the Home button to the PLAY scene
             this._HomeButton = new objects.Button(
                 "FinishButton",
-                config.Screen.CENTER_X - 200,
+                config.Screen.CENTER_X,
                 config.Screen.CENTER_Y + 300);
             this.addChild(this._HomeButton);
            
