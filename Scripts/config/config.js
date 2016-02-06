@@ -25,8 +25,8 @@ var config;
         }
         Screen.WIDTH = 720;
         Screen.HEIGHT = 1280;
-        Screen.CENTER_X = 320;
-        Screen.CENTER_Y = 240;
+        Screen.CENTER_X = 640;
+        Screen.CENTER_Y = 360;
         return Screen;
     })();
     config.Screen = Screen;
